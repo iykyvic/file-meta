@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  h2 upload your files to check their sizes
+  div#upload
+    p#error
+    input#files(type='file' multiple required)
+    button#submit(onclick='upload()') Upload
+    table#table
+      thead
+        tr
+          th File Name
+          th Size(bytes)
